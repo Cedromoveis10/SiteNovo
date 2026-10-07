@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { mediaUrl } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
+const LOCAL_VIDEO = "/videos/hero-campeche.mp4";
+
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [ready, setReady] = useState(false);
@@ -18,29 +20,52 @@ export function HeroVideo() {
       return;
     }
 
-    const play = () => {
-      void video.play().catch(() => undefined);
+    const markReady = () => setReady(true);
+
+    const tryPlay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      const playback = video.play();
+      if (playback) {
+        void playback.then(markReady).catch(() => undefined);
+      }
     };
 
-    play();
+    tryPlay();
+    video.addEventListener("loadeddata", tryPlay);
+    video.addEventListener("canplay", tryPlay);
+    video.addEventListener("playing", markReady);
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) play();
-        else video.pause();
-      },
-      { threshold: 0.2 },
-    );
+    const onVisible = () => {
+      if (document.visibilityState === "visible") tryPlay();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    window.addEventListener("pageshow", tryPlay);
+    window.addEventListener("focus", tryPlay);
+    window.addEventListener("pointerdown", tryPlay, { once: true, passive: true });
 
-    observer.observe(video);
-    return () => observer.disconnect();
+    if (video.readyState >= 2) tryPlay();
+    else video.load();
+
+    return () => {
+      video.removeEventListener("loadeddata", tryPlay);
+      video.removeEventListener("canplay", tryPlay);
+      video.removeEventListener("playing", markReady);
+      document.removeEventListener("visibilitychange", onVisible);
+      window.removeEventListener("pageshow", tryPlay);
+      window.removeEventListener("focus", tryPlay);
+      window.removeEventListener("pointerdown", tryPlay);
+    };
   }, []);
+
+  const remote = mediaUrl("/videos/hero-campeche.mp4");
 
   return (
     <video
       ref={videoRef}
       className={cn(
-        "hero-video absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700",
+        "hero-video absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-500",
         ready ? "opacity-100" : "opacity-0",
       )}
       autoPlay
@@ -50,10 +75,9 @@ export function HeroVideo() {
       preload="auto"
       poster={mediaUrl("/videos/hero-campeche.jpg")}
       aria-hidden="true"
-      onPlaying={() => setReady(true)}
-      onCanPlay={() => setReady(true)}
     >
-      <source src={mediaUrl("/videos/hero-campeche.mp4")} type="video/mp4" />
+      <source src={`${LOCAL_VIDEO}#t=0.001`} type="video/mp4" />
+      {remote !== LOCAL_VIDEO ? <source src={remote} type="video/mp4" /> : null}
     </video>
   );
 }
