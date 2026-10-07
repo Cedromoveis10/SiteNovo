@@ -31,9 +31,8 @@ export function showroomTelHref(showroom: Showroom): string | undefined {
 }
 
 export function showroomWhatsAppHref(showroom: Showroom, message?: string): string | undefined {
-  const number = showroom.whatsappNumber || showroom.phone;
-  if (!number) return undefined;
-  return whatsappUrl(message || specialistMessage(showroom), number);
+  if (!showroom.whatsappNumber) return undefined;
+  return whatsappUrl(message || specialistMessage(showroom), showroom.whatsappNumber);
 }
 
 export function showroomPrimaryAction(
