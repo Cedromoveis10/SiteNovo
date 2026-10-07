@@ -1,0 +1,385 @@
+[
+  {
+    "id": "mesa-bahia",
+    "name": "Mesa Bahia",
+    "slug": "mesa-bahia",
+    "category": "mesas",
+    "subcategory": "Orgânica",
+    "environment": ["sala-de-jantar"],
+    "description": "Mesa de jantar com tampo de cantos orgânicos e base cônica em madeira, de presença escultórica.",
+    "materials": ["Madeira"],
+    "finishes": ["Madeira natural"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/mesa-bahia.png",
+        "alt": "Mesa Bahia em madeira, tampo orgânico e base cônica"
+      }
+    ]
+  },
+  {
+    "id": "mesa-graziela",
+    "name": "Mesa Graziela",
+    "slug": "mesa-graziela",
+    "category": "mesas",
+    "subcategory": "Retangular",
+    "environment": ["sala-de-jantar"],
+    "description": "Mesa de jantar retangular em madeira, com pernas esculpidas e tampo de linhas contínuas.",
+    "materials": ["Madeira"],
+    "finishes": ["Madeira natural"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/mesa-graziela.png",
+        "alt": "Mesa Graziela retangular em madeira, vista em perspectiva"
+      },
+      {
+        "src": "/products/mesa-graziela-2.png",
+        "alt": "Mesa Graziela retangular em madeira, vista frontal"
+      }
+    ]
+  },
+  {
+    "id": "mesa-york",
+    "name": "Mesa York",
+    "slug": "mesa-york",
+    "category": "mesas",
+    "subcategory": "Retangular",
+    "environment": ["sala-de-jantar"],
+    "description": "Mesa de jantar retangular com tampo claro e bases em madeira ripada de desenho curvo.",
+    "materials": ["Madeira", "Vidro"],
+    "finishes": ["Tampo claro", "Madeira natural"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/mesa-york.png",
+        "alt": "Mesa York com tampo claro e bases escultóricas em madeira"
+      }
+    ]
+  },
+  {
+    "id": "mesa-escocia",
+    "name": "Mesa Escócia",
+    "slug": "mesa-escocia",
+    "category": "mesas",
+    "subcategory": "Oval",
+    "environment": ["sala-de-jantar"],
+    "description": "Mesa de jantar oval em madeira, apoiada em duas bases escultóricas com detalhe metálico.",
+    "materials": ["Madeira", "Metal"],
+    "finishes": ["Madeira natural"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/mesa-escocia.png",
+        "alt": "Mesa Escócia oval em madeira, vista em perspectiva"
+      },
+      {
+        "src": "/products/mesa-escocia-2.png",
+        "alt": "Mesa Escócia oval em madeira, vista frontal"
+      }
+    ]
+  },
+  {
+    "id": "mesa-mona",
+    "name": "Mesa Mona",
+    "slug": "mesa-mona",
+    "category": "mesas",
+    "subcategory": "Redonda",
+    "environment": ["sala-de-jantar"],
+    "description": "Mesa de jantar redonda com tampo claro e base cônica em madeira.",
+    "materials": ["Madeira", "Vidro"],
+    "finishes": ["Tampo claro", "Madeira natural"],
+    "images": [
+      {
+        "src": "/products/mesa-mona.png",
+        "alt": "Mesa Mona redonda com tampo claro e base cônica em madeira"
+      }
+    ]
+  },
+  {
+    "id": "mesa-suica",
+    "name": "Mesa Suiça",
+    "slug": "mesa-suica",
+    "category": "mesas",
+    "subcategory": "Retangular",
+    "environment": ["sala-de-jantar"],
+    "description": "Mesa de jantar retangular em madeira, com pés em metal de desenho geométrico.",
+    "materials": ["Madeira", "Metal"],
+    "finishes": ["Madeira natural", "Estrutura metálica"],
+    "images": [
+      {
+        "src": "/products/mesa-suica.png",
+        "alt": "Mesa Suiça retangular em madeira com pés metálicos"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-claudia-tela",
+    "name": "Cadeira Claudia Tela",
+    "slug": "cadeira-claudia-tela",
+    "category": "cadeiras",
+    "subcategory": "Palhinha",
+    "collection": "Claudia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Claudia com encosto em palhinha, assento estofado e estrutura em madeira.",
+    "materials": ["Madeira", "Palhinha", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/cadeira-claudia-tela.png",
+        "alt": "Cadeira Claudia Tela em madeira, palhinha e assento estofado"
+      },
+      {
+        "src": "/products/cadeira-claudia-tela-2.png",
+        "alt": "Cadeira Claudia Tela, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-claudia-estofada",
+    "name": "Cadeira Claudia Estofada",
+    "slug": "cadeira-claudia-estofada",
+    "category": "cadeiras",
+    "subcategory": "Estofada",
+    "collection": "Claudia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Claudia com encosto e assento estofados sobre estrutura em madeira.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/cadeira-claudia-estofada.png",
+        "alt": "Cadeira Claudia Estofada com encosto e assento em tecido claro"
+      },
+      {
+        "src": "/products/cadeira-claudia-estofada-2.png",
+        "alt": "Cadeira Claudia Estofada, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-claudia-madeira",
+    "name": "Cadeira Claudia Madeira",
+    "slug": "cadeira-claudia-madeira",
+    "category": "cadeiras",
+    "subcategory": "Madeira",
+    "collection": "Claudia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Claudia com encosto em madeira e assento estofado.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira clara", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/cadeira-claudia-madeira.png",
+        "alt": "Cadeira Claudia Madeira com encosto em madeira e assento estofado"
+      },
+      {
+        "src": "/products/cadeira-claudia-madeira-2.png",
+        "alt": "Cadeira Claudia Madeira, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-claudia-02",
+    "name": "Cadeira Claudia 02",
+    "slug": "cadeira-claudia-02",
+    "category": "cadeiras",
+    "subcategory": "Estofada",
+    "collection": "Claudia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Claudia com frente estofada e encosto em madeira à vista.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/cadeira-claudia-02.png",
+        "alt": "Cadeira Claudia 02 estofada com encosto em madeira"
+      },
+      {
+        "src": "/products/cadeira-claudia-02-2.png",
+        "alt": "Cadeira Claudia 02, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-beth-tela",
+    "name": "Cadeira Beth Tela",
+    "slug": "cadeira-beth-tela",
+    "category": "cadeiras",
+    "subcategory": "Palhinha",
+    "collection": "Beth",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Beth com encosto em palhinha, assento estofado e estrutura em madeira.",
+    "materials": ["Madeira", "Palhinha", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/cadeira-beth-tela.png",
+        "alt": "Cadeira Beth Tela em madeira, palhinha e assento estofado"
+      },
+      {
+        "src": "/products/cadeira-beth-tela-2.png",
+        "alt": "Cadeira Beth Tela, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-beth-estofada",
+    "name": "Cadeira Beth Estofada",
+    "slug": "cadeira-beth-estofada",
+    "category": "cadeiras",
+    "subcategory": "Estofada",
+    "collection": "Beth",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Beth com encosto e assento estofados sobre estrutura em madeira.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/cadeira-beth-estofada.png",
+        "alt": "Cadeira Beth Estofada com encosto e assento em tecido claro"
+      },
+      {
+        "src": "/products/cadeira-beth-estofada-2.png",
+        "alt": "Cadeira Beth Estofada, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-lucia-estofada",
+    "name": "Cadeira Lucia Estofada",
+    "slug": "cadeira-lucia-estofada",
+    "category": "cadeiras",
+    "subcategory": "Estofada",
+    "collection": "Lucia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Lucia com volume estofado envolvente e estrutura em madeira.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado texturizado"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/cadeira-lucia-estofada.png",
+        "alt": "Cadeira Lucia Estofada com tecido texturizado claro"
+      },
+      {
+        "src": "/products/cadeira-lucia-estofada-2.png",
+        "alt": "Cadeira Lucia Estofada, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-lucia-02",
+    "name": "Cadeira Lucia 02",
+    "slug": "cadeira-lucia-02",
+    "category": "cadeiras",
+    "subcategory": "Estofada",
+    "collection": "Lucia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Lucia com frente estofada e encosto em madeira à vista.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/cadeira-lucia-02.png",
+        "alt": "Cadeira Lucia 02 estofada com encosto em madeira"
+      },
+      {
+        "src": "/products/cadeira-lucia-02-2.png",
+        "alt": "Cadeira Lucia 02, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "cadeira-tonia",
+    "name": "Cadeira Tonia",
+    "slug": "cadeira-tonia",
+    "category": "cadeiras",
+    "subcategory": "Estofada",
+    "collection": "Tonia",
+    "environment": ["sala-de-jantar"],
+    "description": "Cadeira da coleção Tonia com corpo estofado contínuo e pernas em madeira.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado linho"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/cadeira-tonia.png",
+        "alt": "Cadeira Tonia estofada em tecido claro com pernas em madeira"
+      },
+      {
+        "src": "/products/cadeira-tonia-2.png",
+        "alt": "Cadeira Tonia, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "banqueta-lucia",
+    "name": "Banqueta Lucia",
+    "slug": "banqueta-lucia",
+    "category": "banquetas",
+    "subcategory": "Estofada",
+    "collection": "Lucia",
+    "environment": ["gourmet"],
+    "description": "Banqueta da coleção Lucia com assento e encosto estofados, estrutura em madeira e apoio para os pés.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira clara", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/banqueta-lucia.png",
+        "alt": "Banqueta Lucia estofada em madeira clara"
+      },
+      {
+        "src": "/products/banqueta-lucia-2.png",
+        "alt": "Banqueta Lucia, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "banqueta-lucia-02",
+    "name": "Banqueta Lucia 02",
+    "slug": "banqueta-lucia-02",
+    "category": "banquetas",
+    "subcategory": "Estofada",
+    "collection": "Lucia",
+    "environment": ["gourmet"],
+    "description": "Banqueta da coleção Lucia com frente estofada, encosto em madeira e apoio para os pés.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado claro"],
+    "images": [
+      {
+        "src": "/products/banqueta-lucia-02.png",
+        "alt": "Banqueta Lucia 02 estofada com encosto em madeira"
+      },
+      {
+        "src": "/products/banqueta-lucia-02-2.png",
+        "alt": "Banqueta Lucia 02, vista complementar"
+      }
+    ]
+  },
+  {
+    "id": "banqueta-tonia",
+    "name": "Banqueta Tonia",
+    "slug": "banqueta-tonia",
+    "category": "banquetas",
+    "subcategory": "Estofada",
+    "collection": "Tonia",
+    "environment": ["gourmet"],
+    "description": "Banqueta da coleção Tonia com corpo estofado contínuo, pernas em madeira e apoio para os pés.",
+    "materials": ["Madeira", "Tecido"],
+    "finishes": ["Madeira natural", "Estofado linho"],
+    "featured": true,
+    "images": [
+      {
+        "src": "/products/banqueta-tonia.png",
+        "alt": "Banqueta Tonia estofada em tecido claro"
+      },
+      {
+        "src": "/products/banqueta-tonia-2.png",
+        "alt": "Banqueta Tonia, vista complementar"
+      }
+    ]
+  }
+]
