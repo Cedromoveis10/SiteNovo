@@ -1,3 +1,21 @@
+export type Showroom = {
+  id: string;
+  name: string;
+  street: string;
+  neighborhood: string;
+  city: string;
+  state: string;
+  zip: string;
+  phone: string;
+  whatsapp: string;
+  whatsappNumber: string;
+  email: string;
+  instagram: string;
+  hours: ReadonlyArray<{ days: string; time: string }>;
+  mapsQuery: string;
+  mapsUrl: string;
+};
+
 export const siteConfig = {
   name: "Cedro",
   legalName: "Cedro Móveis & Ambientes",
@@ -60,7 +78,5 @@ export const siteConfig = {
       mapsUrl:
         "https://www.google.com/maps/search/?api=1&query=Rod.+Jos%C3%A9+Carlos+Daux,+4939,+Saco+Grande,+Florian%C3%B3polis+-+SC",
     },
-  ],
+  ] satisfies Showroom[],
 } as const;
-
-export type Showroom = (typeof siteConfig.showrooms)[number];
