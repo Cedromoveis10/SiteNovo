@@ -18,7 +18,8 @@ export default function QuotePage() {
           Solicitar orçamento
         </h1>
         <p className="mt-1.5 max-w-xl text-sm leading-6 text-muted">
-          Escolha o showroom mais próximo e envie seus dados. Um especialista retorna com a proposta.
+          Escolha o showroom mais próximo. No WhatsApp, nome e telefone são opcionais — se
+          preencher, guardamos para o atendimento.
         </p>
       </div>
 

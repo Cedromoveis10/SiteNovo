@@ -32,23 +32,45 @@ export function QuoteForm({
   const selectedShowroom = getShowroomById(showroomId);
   const productNames = useMemo(() => items.map((item) => item.name), [items]);
 
-  function validate() {
+  function validateShowroom() {
     if (!selectedShowroom) {
       setShowroomError(true);
       setError(SHOWROOM_REQUIRED);
       return false;
     }
+    setShowroomError(false);
+    setError("");
+    return true;
+  }
+
+  function optionalContact(): { name: string; phone: string } | null {
+    const trimmedName = name.trim().slice(0, 80);
+    const trimmedPhone = phone.trim().slice(0, 20);
+    const digits = trimmedPhone.replace(/\D/g, "");
+
+    if (trimmedName && trimmedName.length < 2) {
+      setError("Informe um nome válido ou deixe em branco.");
+      return null;
+    }
+    if (trimmedPhone && (digits.length < 10 || digits.length > 15)) {
+      setError("Informe um telefone válido ou deixe em branco.");
+      return null;
+    }
+
+    setError("");
+    return { name: trimmedName, phone: trimmedPhone };
+  }
+
+  function validateForm() {
+    if (!validateShowroom()) return false;
     if (name.trim().length < 2) {
-      setShowroomError(false);
       setError("Informe seu nome.");
       return false;
     }
     if (phone.replace(/\D/g, "").length < 10) {
-      setShowroomError(false);
       setError("Informe um telefone para contato válido.");
       return false;
     }
-    setShowroomError(false);
     setError("");
     return true;
   }
@@ -75,7 +97,7 @@ export function QuoteForm({
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!validate() || !selectedShowroom) return;
+    if (!validateForm() || !selectedShowroom) return;
 
     const lead: QuoteLead = {
       name: name.trim().slice(0, 80),
@@ -84,6 +106,7 @@ export function QuoteForm({
       items: productNames.slice(0, 30),
       message: message.trim().slice(0, 2000),
       company: honeypot,
+      channel: "form",
     };
 
     setStatus("sending");
@@ -106,11 +129,25 @@ export function QuoteForm({
   }
 
   function onWhatsApp() {
-    if (!validate() || !selectedShowroom) return;
+    if (!validateShowroom() || !selectedShowroom) return;
+    const contact = optionalContact();
+    if (!contact) return;
+
+    const lead: QuoteLead = {
+      name: contact.name,
+      phone: contact.phone,
+      showroomId: selectedShowroom.id,
+      items: productNames.slice(0, 30),
+      message: message.trim().slice(0, 2000),
+      company: honeypot,
+      channel: "whatsapp",
+    };
+
+    void tryServerSend(lead);
 
     const text = listQuoteMessage(productNames, {
-      name: name.trim(),
-      phone: phone.trim(),
+      name: contact.name,
+      phone: contact.phone,
       message: message.trim(),
       showroom: selectedShowroom,
     });
@@ -243,11 +280,10 @@ export function QuoteForm({
 
       <div className="grid grid-cols-2 items-end gap-4">
         <label className="block">
-          <span className="eyebrow">Nome *</span>
+          <span className="eyebrow">Nome</span>
           <input
             name="name"
             type="text"
-            required
             autoComplete="name"
             maxLength={80}
             value={name}
@@ -258,13 +294,12 @@ export function QuoteForm({
 
         <label className="block">
           <span className="eyebrow leading-tight">
-            <span className="sm:hidden">Telefone *</span>
-            <span className="hidden sm:inline">Telefone para contato *</span>
+            <span className="sm:hidden">Telefone</span>
+            <span className="hidden sm:inline">Telefone para contato</span>
           </span>
           <input
             name="phone"
             type="tel"
-            required
             autoComplete="tel"
             maxLength={20}
             inputMode="tel"
@@ -274,6 +309,9 @@ export function QuoteForm({
           />
         </label>
       </div>
+      <p className="-mt-2 text-sm text-muted">
+        Opcionais no WhatsApp. Necessários para solicitar o orçamento por aqui.
+      </p>
 
       <label className="block">
         <span className="eyebrow">Mensagem (opcional)</span>

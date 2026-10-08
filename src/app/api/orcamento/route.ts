@@ -49,8 +49,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
+  const channel = data.channel === "whatsapp" ? "whatsapp" : "form";
   const name = sanitizeLine(data.name, NAME_MAX);
-  const phoneDigits = String(data.phone ?? "").replace(/\D/g, "");
+  const phone = String(data.phone ?? "").trim().slice(0, 20);
+  const phoneDigits = phone.replace(/\D/g, "");
   const showroomId = sanitizeLine(data.showroomId, 40);
   const message = sanitizeMultiline(data.message, MESSAGE_MAX);
   const items = Array.isArray(data.items)
@@ -60,9 +62,21 @@ export async function POST(request: Request) {
         .slice(0, ITEMS_MAX)
     : [];
 
-  if (name.length < 2 || phoneDigits.length < 10 || phoneDigits.length > 15) {
+  const nameOk = name.length === 0 || name.length >= 2;
+  const phoneOk =
+    phoneDigits.length === 0 ||
+    (phoneDigits.length >= 10 && phoneDigits.length <= 15);
+
+  if (channel === "form") {
+    if (name.length < 2 || phoneDigits.length < 10 || phoneDigits.length > 15) {
+      return NextResponse.json(
+        { error: "Informe nome e telefone para contato válidos." },
+        { status: 400 },
+      );
+    }
+  } else if (!nameOk || !phoneOk) {
     return NextResponse.json(
-      { error: "Informe nome e telefone para contato válidos." },
+      { error: "Informe nome e telefone válidos ou deixe em branco." },
       { status: 400 },
     );
   }
@@ -76,15 +90,19 @@ export async function POST(request: Request) {
 
   const lead = {
     name,
-    phone: String(data.phone ?? "").trim().slice(0, 20),
+    phone,
     showroomId,
     items,
     message,
+    channel,
   };
 
   try {
     try {
-      await insertQuoteLead(lead, "orcamento_page");
+      await insertQuoteLead(
+        lead,
+        channel === "whatsapp" ? "whatsapp" : "orcamento_page",
+      );
     } catch (error) {
       console.error(
         "quote_leads insert failed",
@@ -92,7 +110,9 @@ export async function POST(request: Request) {
       );
     }
 
-    await sendQuoteEmail(lead);
+    if (channel !== "whatsapp") {
+      await sendQuoteEmail(lead);
+    }
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: GENERIC_ERROR }, { status: 502 });
