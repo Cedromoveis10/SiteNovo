@@ -533,7 +533,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/1 braço: 1,08m; 1,18m; 1,28m; 1,38m; 1,48m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m. Profundidade fechada: 1,05m; aberta: 1,55m. Altura: 80cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,08m; 1,18m; 1,28m; 1,38m; 1,48m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m",
+      "Profundidade fechada: 1,05m",
+      "Profundidade aberta: 1,55m",
+      "Altura: 80cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -564,7 +573,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m. Módulo sem braço: 95cm; 1,05m; 1,15m; 1,25m; 1,35m. Profundidade: 1,15m; chaise: 1,65m. Altura: 93cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m",
+      "Módulo sem braço: 95cm; 1,05m; 1,15m; 1,25m; 1,35m",
+      "Profundidade: 1,15m",
+      "Chaise: 1,65m",
+      "Altura: 93cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -591,7 +609,17 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,00m; 1,10m; 1,20m; 1,30m; 1,40m; 1,50m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m; 1,30m. Profundidade: 1,20m; sistema baixa encosto: 1,38m; aberto: 1,50m. Altura: 85cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,00m; 1,10m; 1,20m; 1,30m; 1,40m; 1,50m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m; 1,30m",
+      "Profundidade: 1,20m",
+      "Sistema baixa encosto: 1,38m",
+      "Aberto: 1,50m",
+      "Altura: 85cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -618,7 +646,17 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m. Configurações: 2,00m; 2,20m; 2,30m; 2,40m. Profundidade fechada: 1,05m; aberta: 1,47m. Altura: 80cm/90cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m",
+      "Configurações: 2,00m; 2,20m; 2,30m; 2,40m",
+      "Profundidade fechada: 1,05m",
+      "Profundidade aberta: 1,47m",
+      "Altura: 80cm/90cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -645,7 +683,14 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,35m; 1,45m; 1,55m; 1,65m; 1,75m. Configurações: 1,90m; 2,10m; 2,30m; 2,50m. Altura: 80cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,35m; 1,45m; 1,55m; 1,65m; 1,75m",
+      "Configurações: 1,90m; 2,10m; 2,30m; 2,50m",
+      "Altura: 80cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -672,7 +717,15 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m. Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m. Profundidade: 90cm. Altura: 85cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m",
+      "Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m",
+      "Profundidade: 90cm",
+      "Altura: 85cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -699,7 +752,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m; 1,55m. Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m; 1,25m; 1,35m. Profundidade: 1,10m; chaise: 1,25m. Altura: 75/88cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m; 1,55m",
+      "Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m; 1,25m; 1,35m",
+      "Profundidade: 1,10m",
+      "Chaise: 1,25m",
+      "Altura: 75/88cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -722,7 +784,15 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m. Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m. Profundidade: 90cm. Altura: 85cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m",
+      "Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m",
+      "Profundidade: 90cm",
+      "Altura: 85cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -745,7 +815,15 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,12m; 1,22m; 1,32m; 1,42m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m. Profundidade: 1,15m. Altura: 88cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,12m; 1,22m; 1,32m; 1,42m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m",
+      "Profundidade: 1,15m",
+      "Altura: 88cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -776,7 +854,18 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/1 braço: 1,07m; 1,17m; 1,27m; 1,37m; 1,47m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m. Sumier: 1,30m; 1,40m; 1,50m; 1,60m; 1,70m. Puff: 1,40x1,00m; 1,00x1,00m. Profundidade: 1,10m; retrátil aberto: 1,25m. Altura: 75/88cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,07m; 1,17m; 1,27m; 1,37m; 1,47m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m",
+      "Sumier: 1,30m; 1,40m; 1,50m; 1,60m; 1,70m",
+      "Puff: 1,40x1,00m; 1,00x1,00m",
+      "Profundidade: 1,10m",
+      "Profundidade aberta: 1,25m",
+      "Altura: 75/88cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -803,7 +892,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/1 braço: 1,09m; 1,19m; 1,29m; 1,39m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m. Profundidade: 1,07m; retrátil aberto: 1,54m. Altura: 86cm/102cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,09m; 1,19m; 1,29m; 1,39m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m",
+      "Profundidade: 1,07m",
+      "Profundidade aberta: 1,54m",
+      "Altura: 86cm/102cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -830,7 +928,18 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,25m; 1,35m; 1,45m; 1,55m. Módulo sem braço: 90cm; 1,00m; 1,10m; 1,20m. Sumier: 1,40m; 1,50m; 1,60m; 1,70m. Canto: 1,15x1,15m. Módulo curvo: 1,55x1,10m. Profundidade: 1,25m. Altura: 70cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,25m; 1,35m; 1,45m; 1,55m",
+      "Módulo sem braço: 90cm; 1,00m; 1,10m; 1,20m",
+      "Sumier: 1,40m; 1,50m; 1,60m; 1,70m",
+      "Canto: 1,15x1,15m",
+      "Módulo curvo: 1,55x1,10m",
+      "Profundidade: 1,25m",
+      "Altura: 70cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -857,7 +966,14 @@
       "sala-de-estar"
     ],
     "description": "Poltrona.",
-    "dimensions": "90x90x80cm (LxPxA).",
+    "dimensionLines": [
+      "Largura: 90 cm",
+      "Profundidade: 90 cm",
+      "Altura: 80 cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -880,7 +996,14 @@
       "sala-de-estar"
     ],
     "description": "Poltrona.",
-    "dimensions": "90x90x76cm (LxPxA).",
+    "dimensionLines": [
+      "Largura: 90 cm",
+      "Profundidade: 90 cm",
+      "Altura: 76 cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -903,7 +1026,14 @@
       "sala-de-estar"
     ],
     "description": "Poltrona.",
-    "dimensions": "98x70x73cm (LxPxA).",
+    "dimensionLines": [
+      "Largura: 98 cm",
+      "Profundidade: 70 cm",
+      "Altura: 73 cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -926,7 +1056,14 @@
       "sala-de-estar"
     ],
     "description": "Poltrona.",
-    "dimensions": "80x80x96cm (LxPxA).",
+    "dimensionLines": [
+      "Largura: 80 cm",
+      "Profundidade: 80 cm",
+      "Altura: 96 cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -949,7 +1086,15 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço: 1,20m; 1,30m; 1,40m. Módulo sem braço: 1,00m; 1,10m; 1,20m. Altura: 82/90cm; profundidade: 98cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,20m; 1,30m; 1,40m",
+      "Módulo sem braço: 1,00m; 1,10m; 1,20m",
+      "Altura: 82/90cm",
+      "Profundidade: 98cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -976,7 +1121,18 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/1 braço/1 assento: 93cm; 1,03m; 1,13m; 1,23m; 1,33m; 1,43m. Sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m. 1 braço/2 assentos: 1,63m; 1,73m; 1,83m; 2,03m; 2,23m. 2 braços/2 assentos: 1,86m; 1,96m; 2,06m; 2,26m; 2,46m. Bi-partido 3 assentos: 3,26m. Chaise: larguras 93cm a 1,43m; comprimento 1,65m. Puff: 1,00x1,05m ou 60x1,05cm.",
+    "dimensionLines": [
+      "Módulo com 1 braço/1 assento: 93cm; 1,03m; 1,13m; 1,23m; 1,33m; 1,43m",
+      "Sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m",
+      "1 braço/2 assentos: 1,63m; 1,73m; 1,83m; 2,03m; 2,23m",
+      "2 braços/2 assentos: 1,86m; 1,96m; 2,06m; 2,26m; 2,46m",
+      "Bi-partido 3 assentos: 3,26m",
+      "Chaise: larguras 93cm a 1,43m; comprimento 1,65m",
+      "Puff: 1,00x1,05m ou 60x1,05cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -999,7 +1155,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m. Chaise c/ braço: 1,05m; 1,15m; 1,25m; 1,35m. Profundidade fechada: 1,15m; retrátil aberto: 1,52m.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m",
+      "Chaise com braço: 1,05m; 1,15m; 1,25m; 1,35m",
+      "Profundidade fechada: 1,15m",
+      "Profundidade aberta: 1,52m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1022,7 +1187,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/1 braço: 1,05m; 1,15m; 1,25m; 1,35m. Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m. Chaise c/ braço: 1,05m; 1,15m; 1,25m; 1,35m; 1,55m. Profundidade fechada: 1,15m; retrátil aberto: 1,52m.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 1,15m; 1,25m; 1,35m",
+      "Módulo sem braço: 80cm; 90cm; 1,00m; 1,10m; 1,20m",
+      "Chaise com braço: 1,05m; 1,15m; 1,25m; 1,35m; 1,55m",
+      "Profundidade fechada: 1,15m",
+      "Profundidade aberta: 1,52m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1049,7 +1223,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/ braço retrátil: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m. Sem braço retrátil: 85cm; 95cm; 1,05m; 1,15m; 1,25m. Sumier: 1,35m; 1,45m; 1,55m; 1,65m; 1,75m. Canto: 1,15x1,15m. Chaise retrátil: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m; comprimento 1,60m (aberta 2,00m).",
+    "dimensionLines": [
+      "Módulo com braço retrátil: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m",
+      "Sem braço retrátil: 85cm; 95cm; 1,05m; 1,15m; 1,25m",
+      "Sumier: 1,35m; 1,45m; 1,55m; 1,65m; 1,75m",
+      "Canto: 1,15x1,15m",
+      "Chaise retrátil: 1,05m; 1,15m; 1,25m; 1,35m; 1,45m; comprimento 1,60m (aberta 2,00m)"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1076,7 +1259,16 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/ braço retrátil: 85cm; 95cm; 1,05m; 1,15m; 1,25m. Módulo sem braço retrátil: 65cm; 75cm; 85cm; 95cm; 1,05m. Configurações: 2,00m; 2,20m; 2,40m; 2,60m. Profundidade fechada: 1,05m; retrátil aberto: 1,54m.",
+    "dimensionLines": [
+      "Módulo com braço retrátil: 85cm; 95cm; 1,05m; 1,15m; 1,25m",
+      "Módulo sem braço retrátil: 65cm; 75cm; 85cm; 95cm; 1,05m",
+      "Configurações: 2,00m; 2,20m; 2,40m; 2,60m",
+      "Profundidade fechada: 1,05m",
+      "Profundidade aberta: 1,54m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1103,7 +1295,14 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo: 88cm; 98cm; 1,08m; 1,18m; 1,28m. Sem braço: 65cm; 75cm; 85cm; 95cm; 1,05m. Opção retrátil elétrico.",
+    "dimensionLines": [
+      "Módulo: 88cm; 98cm; 1,08m; 1,18m; 1,28m",
+      "Sem braço: 65cm; 75cm; 85cm; 95cm; 1,05m",
+      "Opção retrátil elétrico"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1130,7 +1329,15 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/ braço retrátil: 87cm; 97cm; 1,07m; 1,16m; 1,26m. Sem braço retrátil: 60cm; 70cm; 80cm; 90cm; 1,00m. Profundidade fechada: 1,18m; retrátil aberto: 1,65m.",
+    "dimensionLines": [
+      "Módulo com braço retrátil: 87cm; 97cm; 1,07m; 1,16m; 1,26m",
+      "Sem braço retrátil: 60cm; 70cm; 80cm; 90cm; 1,00m",
+      "Profundidade fechada: 1,18m",
+      "Profundidade aberta: 1,65m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1157,7 +1364,13 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular retrátil.",
-    "dimensions": "Módulo c/ braço retrátil: 93cm; 1,03m; 1,13m; 1,23m; 1,33m. Sem braço retrátil: 65cm; 75cm; 85cm; 95cm; 1,05m.",
+    "dimensionLines": [
+      "Módulo com braço retrátil: 93cm; 1,03m; 1,13m; 1,23m; 1,33m",
+      "Sem braço retrátil: 65cm; 75cm; 85cm; 95cm; 1,05m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1184,7 +1397,12 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Sofá: 1,80m; 2,00m; 2,20m; 2,40m; 2,60m.",
+    "dimensionLines": [
+      "Sofá: 1,80m; 2,00m; 2,20m; 2,40m; 2,60m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1207,7 +1425,14 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Sofá: 1,80m; 2,20m; 2,40m; 2,60m. Poltrona: 1,40m. Puff: 1,40x80cm.",
+    "dimensionLines": [
+      "Sofá: 1,80m; 2,20m; 2,40m; 2,60m",
+      "Poltrona: 1,40m",
+      "Puff: 1,40x80cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1226,7 +1451,13 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulos: 1,30m; 1,50m; 1,70m; 1,90m; 2,10m. Módulo chaise: 1,30x95cm.",
+    "dimensionLines": [
+      "Módulos: 1,30m; 1,50m; 1,70m; 1,90m; 2,10m",
+      "Módulo chaise: 1,30x95cm"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1249,7 +1480,19 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/ braço: 1,10m; 1,20m; 1,30m. Módulo sem braço: 90cm; 1,00m; 1,10m. Chaise sem braço: 1,25m; 1,35m; 1,45m. Canto: 1,25x1,25m. Módulo curvo: 1,55m; sumier: 1,50m; 1,60m; 1,70m. Puff: 90x85cm; 1,00x85cm; 1,10x85cm; 1,20x85cm; 1,30x85cm. Poltrona fixa ou giratória.",
+    "dimensionLines": [
+      "Módulo com braço: 1,10m; 1,20m; 1,30m",
+      "Módulo sem braço: 90cm; 1,00m; 1,10m",
+      "Chaise sem braço: 1,25m; 1,35m; 1,45m",
+      "Canto: 1,25x1,25m",
+      "Módulo curvo: 1,55m",
+      "Sumier: 1,50m; 1,60m; 1,70m",
+      "Puff: 90x85cm; 1,00x85cm; 1,10x85cm; 1,20x85cm; 1,30x85cm",
+      "Poltrona fixa ou giratória"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {
@@ -1276,7 +1519,17 @@
       "sala-de-estar"
     ],
     "description": "Estofado modular fixo.",
-    "dimensions": "Módulo c/ braço: 1,07m; 1,17m; 1,27m; 1,37m; 1,47m. Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m; 1,25m. Chaise c/ braço: 1,07m a 1,47m; comprimento 1,60m. Sumier: 1,35m; 1,45m; 1,55m; 1,65m; 1,75m. Canto: 1,05x1,05m. Puff: 1,00x1,08m ou 1,30x1,05m.",
+    "dimensionLines": [
+      "Módulo com braço: 1,07m; 1,17m; 1,27m; 1,37m; 1,47m",
+      "Módulo sem braço: 85cm; 95cm; 1,05m; 1,15m; 1,25m",
+      "Chaise com braço: 1,07m a 1,47m; comprimento 1,60m",
+      "Sumier: 1,35m; 1,45m; 1,55m; 1,65m; 1,75m",
+      "Canto: 1,05x1,05m",
+      "Puff: 1,00x1,08m ou 1,30x1,05m"
+    ],
+    "materials": [
+      "Tecido"
+    ],
     "featured": false,
     "images": [
       {

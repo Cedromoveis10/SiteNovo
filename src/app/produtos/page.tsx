@@ -26,7 +26,6 @@ export default async function ProductsPage({
     environment: stringParam(params.ambiente),
     material: stringParam(params.material),
     finish: stringParam(params.acabamento),
-    collection: stringParam(params.colecao),
   });
 
   return (

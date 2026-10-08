@@ -1,12 +1,14 @@
-import { copyFileSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import sharp from "sharp";
+import { parseDimensionLines } from "./parse-klassic-measures.mjs";
 
 const SRC = "/Users/lucasstraub/Downloads/Estofados-2";
 const DEST = join(process.cwd(), "public/products");
 const JSON_PATH = join(process.cwd(), "src/data/products.json");
 const SUPPLIERS_PATH = join(process.cwd(), "scripts/product-suppliers.json");
 const PHOTO_RE = /^(Estofado|Poltrona) (.+?)(?: \((\d+)\))?\.png$/i;
+const JSON_ONLY = process.argv.includes("--json-only");
 
 function fold(value) {
   return value
@@ -37,6 +39,37 @@ function parseCsv(text) {
       mechanism: match[4].trim(),
     };
   });
+}
+
+const SQUARE = 1080;
+const PHOTO_MARGIN = 0.05;
+
+async function frameSquare(src, dest) {
+  const trimmed = await sharp(src)
+    .trim({ threshold: 14 })
+    .toBuffer({ resolveWithObject: true });
+  const inner = Math.round(SQUARE * (1 - PHOTO_MARGIN * 2));
+  const scale = Math.min(inner / trimmed.info.width, inner / trimmed.info.height);
+  const width = Math.max(1, Math.round(trimmed.info.width * scale));
+  const height = Math.max(1, Math.round(trimmed.info.height * scale));
+  const resized = await sharp(trimmed.data).resize(width, height).png().toBuffer();
+  await sharp({
+    create: {
+      width: SQUARE,
+      height: SQUARE,
+      channels: 3,
+      background: { r: 255, g: 255, b: 255 },
+    },
+  })
+    .composite([
+      {
+        input: resized,
+        left: Math.round((SQUARE - width) / 2),
+        top: Math.round((SQUARE - height) / 2),
+      },
+    ])
+    .png()
+    .toFile(dest);
 }
 
 function description(kind, mechanism) {
@@ -93,12 +126,20 @@ for (const row of rows) {
 
   const slug = slugify(`${group.kind} ${group.rawName}`);
   const name = `${group.kind} ${row.name}`;
-  const images = group.files.map((item, index) => {
+  const previous = existing.find((product) => product.id === slug);
+  const images = [];
+  for (const [index, item] of group.files.entries()) {
     const destName = index === 0 ? `${slug}.png` : `${slug}-${item.n}.png`;
-    const destPath = join(DEST, destName);
-    copyFileSync(join(SRC, item.file), destPath);
-    return { destPath, destName, n: item.n, index };
-  });
+    if (!JSON_ONLY) {
+      await frameSquare(join(SRC, item.file), join(DEST, destName));
+    }
+    images.push(
+      previous?.images?.[index] ?? {
+        src: `/products/${destName}`,
+        alt: index === 0 ? name : `${name}, vista ${item.n}`,
+      },
+    );
+  }
 
   klassic.push({
     id: slug,
@@ -108,22 +149,10 @@ for (const row of rows) {
     subcategory: row.mechanism || undefined,
     environment: ["sala-de-estar"],
     description: description(group.kind, row.mechanism),
-    dimensions: row.dimensions || undefined,
+    dimensionLines: parseDimensionLines(row.dimensions),
+    materials: ["Tecido"],
     featured: false,
-    images: await Promise.all(
-      images.map(async (item) => {
-        const buffer = await sharp(item.destPath)
-          .trim({ threshold: 12 })
-          .png()
-          .toBuffer();
-        await sharp(buffer).toFile(item.destPath);
-        return {
-          src: `/products/${item.destName}`,
-          alt:
-            item.index === 0 ? name : `${name}, vista ${item.n}`,
-        };
-      }),
-    ),
+    images,
   });
 }
 
@@ -139,7 +168,7 @@ const suppliers = Object.fromEntries(
 writeFileSync(
   JSON_PATH,
   `${JSON.stringify(
-    catalog.map(({ supplier, ...product }) => product),
+    catalog.map(({ supplier, dimensions, width, height, depth, ...product }) => product),
     null,
     2,
   )}\n`,

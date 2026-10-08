@@ -40,25 +40,25 @@ export const categories: Category[] = [
 
 export const environments: Environment[] = [
   {
-    slug: "sala-de-jantar",
-    name: "Sala de jantar",
+    slug: "sala-de-estar",
+    name: "Sala de estar",
     description:
-      "Mesas e cadeiras para o ambiente de convívio — onde o desenho da peça organiza a sala.",
-    image: mediaUrl("/products/mesa-escocia.png"),
+      "Estofados e poltronas para o estar — peças para composição e conforto do ambiente.",
+    image: mediaUrl("/environments/sala-de-estar.jpg"),
+  },
+  {
+    slug: "sala-de-jantar",
+    name: "Cozinha",
+    description:
+      "Mesas e cadeiras para a cozinha e o convívio — onde o desenho da peça organiza o ambiente.",
+    image: mediaUrl("/environments/sala-de-jantar.jpg"),
   },
   {
     slug: "gourmet",
     name: "Gourmet",
     description:
       "Banquetas para ilha e espaços gourmet, com conforto e continuidade visual da coleção.",
-    image: mediaUrl("/products/banqueta-lucia-02.png"),
-  },
-  {
-    slug: "sala-de-estar",
-    name: "Sala de estar",
-    description:
-      "Estofados e poltronas para o estar — peças para composição e conforto do ambiente.",
-    image: mediaUrl("/products/estofado-rivo.png"),
+    image: mediaUrl("/environments/gourmet.jpg"),
   },
 ];
 

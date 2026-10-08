@@ -23,6 +23,10 @@ create table if not exists public.products (
   environment text[] not null default '{}'::text[],
   description text,
   dimensions text,
+  width text,
+  height text,
+  depth text,
+  dimension_lines text[] not null default '{}'::text[],
   materials text[] not null default '{}'::text[],
   finishes text[] not null default '{}'::text[],
   images jsonb not null default '[]'::jsonb,
@@ -31,6 +35,11 @@ create table if not exists public.products (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.products add column if not exists width text;
+alter table public.products add column if not exists height text;
+alter table public.products add column if not exists depth text;
+alter table public.products add column if not exists dimension_lines text[] default '{}'::text[];
 
 alter table public.products enable row level security;
 
@@ -51,13 +60,13 @@ try {
       `
       insert into public.products (
         id, name, slug, category, subcategory, collection,
-        environment, description, dimensions, materials, finishes,
-        images, featured, supplier, updated_at
+        environment, description, dimensions, width, height, depth,
+        dimension_lines, materials, finishes, images, featured, supplier, updated_at
       )
       values (
         $1, $2, $3, $4, $5, $6,
-        $7, $8, $9, $10, $11,
-        $12::jsonb, $13, $14, now()
+        $7, $8, $9, $10, $11, $12,
+        $13, $14, $15, $16::jsonb, $17, $18, now()
       )
       on conflict (id) do update set
         name = excluded.name,
@@ -68,6 +77,10 @@ try {
         environment = excluded.environment,
         description = excluded.description,
         dimensions = excluded.dimensions,
+        width = excluded.width,
+        height = excluded.height,
+        depth = excluded.depth,
+        dimension_lines = excluded.dimension_lines,
         materials = excluded.materials,
         finishes = excluded.finishes,
         images = excluded.images,
@@ -84,7 +97,11 @@ try {
         product.collection ?? null,
         product.environment ?? [],
         product.description ?? null,
-        product.dimensions ?? null,
+        null,
+        null,
+        null,
+        null,
+        product.dimensionLines ?? [],
         product.materials ?? [],
         product.finishes ?? [],
         JSON.stringify(product.images ?? []),

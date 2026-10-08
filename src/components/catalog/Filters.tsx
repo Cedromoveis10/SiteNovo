@@ -14,7 +14,6 @@ export function Filters({ products }: { products: Product[] }) {
     environment: params.get("ambiente") ?? "",
     material: params.get("material") ?? "",
     finish: params.get("acabamento") ?? "",
-    collection: params.get("colecao") ?? "",
   };
 
   function update(key: string, value: string) {
@@ -62,14 +61,6 @@ export function Filters({ products }: { products: Product[] }) {
           label: "Acabamento",
           value: selected.finish,
           items: options.finishes.map((value) => ({ value, label: value })),
-        }
-      : null,
-    options.collections.length > 0
-      ? {
-          key: "colecao",
-          label: "Coleção",
-          value: selected.collection,
-          items: options.collections.map((value) => ({ value, label: value })),
         }
       : null,
   ].filter(Boolean) as Array<{

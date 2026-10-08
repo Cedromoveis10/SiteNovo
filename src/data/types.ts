@@ -21,7 +21,7 @@ export type Product = {
   collection?: string;
   environment: EnvironmentSlug[];
   description?: string;
-  dimensions?: string;
+  dimensionLines?: string[];
   materials?: string[];
   finishes?: string[];
   images: ProductImage[];

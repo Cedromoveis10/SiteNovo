@@ -11,8 +11,8 @@ export function EnvironmentCard({ environment }: { environment: Environment }) {
           src={environment.image}
           alt={environment.name}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-contain p-10 opacity-90 transition-transform duration-500 group-hover:scale-[1.04]"
+          sizes="(min-width: 768px) 33vw, 100vw"
+          className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-[1.04]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-7 text-paper">

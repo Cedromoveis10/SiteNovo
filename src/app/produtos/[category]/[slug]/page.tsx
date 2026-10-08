@@ -72,7 +72,6 @@ export default async function ProductPage({
   const specs = [
     product.collection ? ["Coleção", product.collection] : null,
     product.subcategory ? [variationLabel, product.subcategory] : null,
-    product.dimensions ? ["Dimensões", product.dimensions] : null,
     product.materials?.length
       ? ["Materiais", product.materials.join(", ")]
       : null,
@@ -83,6 +82,8 @@ export default async function ProductPage({
       ? ["Ambientes", product.environment.map(environmentLabel).join(", ")]
       : null,
   ].filter(Boolean) as Array<[string, string]>;
+
+  const dimensionLines = product.dimensionLines ?? [];
 
   return (
     <div className="mx-auto max-w-7xl px-5 pt-28 pb-24 md:px-8 md:pt-36">
@@ -121,8 +122,25 @@ export default async function ProductPage({
             <p className="mt-6 text-[1.02rem] leading-7 text-muted">{product.description}</p>
           ) : null}
 
+          {dimensionLines.length > 0 ? (
+            <div className="mt-10 border-y border-line py-5">
+              <p className="eyebrow">Dimensões disponíveis</p>
+              <ul className="mt-4 space-y-2 text-sm leading-6">
+                {dimensionLines.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
           {specs.length > 0 ? (
-            <dl className="mt-10 divide-y divide-line border-y border-line">
+            <dl
+              className={`divide-y divide-line ${
+                dimensionLines.length > 0
+                  ? "mt-0 border-b border-line"
+                  : "mt-10 border-y border-line"
+              }`}
+            >
               {specs.map(([label, value]) => (
                 <div
                   key={label}

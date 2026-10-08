@@ -56,7 +56,6 @@ export default async function CategoryPage({
     environment: stringParam(query.ambiente),
     material: stringParam(query.material),
     finish: stringParam(query.acabamento),
-    collection: stringParam(query.colecao),
   });
 
   return (

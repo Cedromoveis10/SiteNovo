@@ -87,7 +87,7 @@ export function searchProducts(query: string): Product[] {
       product.category,
       product.subcategory,
       product.collection,
-      product.dimensions,
+      ...(product.dimensionLines ?? []),
       ...(product.materials ?? []),
       ...(product.finishes ?? []),
       ...product.environment,
@@ -107,11 +107,6 @@ export function getFilterOptions(list: Product[] = products) {
     environments: unique(list.flatMap((product) => product.environment)),
     materials: unique(list.flatMap((product) => product.materials ?? [])),
     finishes: unique(list.flatMap((product) => product.finishes ?? [])),
-    collections: unique(
-      list
-        .map((product) => product.collection)
-        .filter((value): value is string => Boolean(value)),
-    ),
   };
 }
 
@@ -122,7 +117,6 @@ export function filterProducts(
     environment?: string;
     material?: string;
     finish?: string;
-    collection?: string;
     query?: string;
   },
 ): Product[] {
@@ -141,9 +135,6 @@ export function filterProducts(
       return false;
     }
     if (filters.finish && !product.finishes?.includes(filters.finish)) {
-      return false;
-    }
-    if (filters.collection && product.collection !== filters.collection) {
       return false;
     }
     if (filters.query) {

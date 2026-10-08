@@ -31,7 +31,7 @@ if (!url || !key) {
 }
 
 const supabase = createClient(url, key);
-const roots = ["public/brand", "public/products", "public/videos"];
+const roots = ["public/brand", "public/products", "public/environments", "public/videos"];
 
 for (const root of roots) {
   for (const file of walk(root)) {
