@@ -10,6 +10,7 @@ import {
 } from "react";
 import type { Product } from "@/data/types";
 import { track } from "@/lib/analytics";
+import { products } from "@/lib/products";
 
 type QuoteItem = {
   id: string;
@@ -49,7 +50,7 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setItems(JSON.parse(stored) as QuoteItem[]);
+      setItems(stored ? sanitizeQuoteItems(JSON.parse(stored)) : []);
     } catch {
       setItems([]);
     } finally {
@@ -110,6 +111,24 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
       ) : null}
     </QuoteContext.Provider>
   );
+}
+
+function sanitizeQuoteItems(raw: unknown): QuoteItem[] {
+  if (!Array.isArray(raw)) return [];
+  const seen = new Set<string>();
+  const next: QuoteItem[] = [];
+  for (const entry of raw) {
+    const id =
+      entry && typeof entry === "object" && "id" in entry
+        ? String((entry as { id?: unknown }).id)
+        : "";
+    const product = products.find((item) => item.id === id);
+    if (!product || seen.has(product.id)) continue;
+    seen.add(product.id);
+    next.push(toItem(product));
+    if (next.length >= 30) break;
+  }
+  return next;
 }
 
 export function useQuote() {

@@ -184,7 +184,8 @@ export function Header() {
               id="search-input"
               ref={searchRef}
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => setQuery(event.target.value.slice(0, 80))}
+              maxLength={80}
               placeholder="Digite o que procura..."
               className="field text-lg"
             />
@@ -269,7 +270,8 @@ export function Header() {
                 <input
                   id="mobile-search"
                   value={query}
-                  onChange={(event) => setQuery(event.target.value)}
+                  onChange={(event) => setQuery(event.target.value.slice(0, 80))}
+                  maxLength={80}
                   placeholder="Digite o que procura..."
                   className="field"
                 />

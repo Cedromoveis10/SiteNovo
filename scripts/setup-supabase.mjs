@@ -17,6 +17,8 @@ set public = excluded.public,
     file_size_limit = excluded.file_size_limit,
     allowed_mime_types = excluded.allowed_mime_types;
 
+drop policy if exists "Anon upload media" on storage.objects;
+drop policy if exists "Anon update media" on storage.objects;
 drop policy if exists "Public read media" on storage.objects;
 create policy "Public read media"
 on storage.objects
@@ -24,20 +26,7 @@ for select
 to public
 using (bucket_id = 'media');
 
-drop policy if exists "Anon upload media" on storage.objects;
-create policy "Anon upload media"
-on storage.objects
-for insert
-to anon
-with check (bucket_id = 'media');
-
-drop policy if exists "Anon update media" on storage.objects;
-create policy "Anon update media"
-on storage.objects
-for update
-to anon
-using (bucket_id = 'media')
-with check (bucket_id = 'media');
+revoke insert, update, delete, truncate, references, trigger on storage.objects from anon, authenticated;
 
 create table if not exists public.quote_leads (
   id uuid primary key default gen_random_uuid(),
@@ -51,13 +40,11 @@ create table if not exists public.quote_leads (
 );
 
 alter table public.quote_leads enable row level security;
-
 drop policy if exists "Site can insert quote leads" on public.quote_leads;
-create policy "Site can insert quote leads"
-on public.quote_leads
-for insert
-to anon
-with check (char_length(name) >= 2 and char_length(phone) >= 10);
+revoke all on table public.quote_leads from anon, authenticated, public;
+
+alter table public.products enable row level security;
+revoke all on table public.products from anon, authenticated, public;
 `;
 
 const client = new pg.Client({

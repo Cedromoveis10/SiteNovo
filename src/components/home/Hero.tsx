@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { mediaUrl } from "@/lib/media";
 import { HeroVideo } from "./HeroVideo";
 
 export function Hero() {
@@ -11,7 +10,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src={mediaUrl("/videos/hero-campeche.jpg")}
+          src="/videos/hero-campeche.jpg"
           alt=""
           fill
           priority

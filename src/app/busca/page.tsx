@@ -13,16 +13,17 @@ export default async function SearchPage({
   searchParams: Promise<{ q?: string }>;
 }) {
   const { q = "" } = await searchParams;
-  const results = searchProducts(q);
+  const query = q.trim().slice(0, 80);
+  const results = searchProducts(query);
 
   return (
     <div className="mx-auto max-w-7xl px-5 pt-28 pb-24 md:px-8 md:pt-36">
       <p className="eyebrow">Busca</p>
       <h1 className="mt-3 font-display text-5xl tracking-tight">
-        {q ? `Resultados para “${q}”` : "Digite o que procura"}
+        {query ? `Resultados para “${query}”` : "Digite o que procura"}
       </h1>
       <p className="mt-4 text-sm text-muted">
-        {q
+        {query
           ? results.length === 1
             ? "1 peça encontrada"
             : `${results.length} peças encontradas`
@@ -31,7 +32,7 @@ export default async function SearchPage({
       <div className="mt-12">
         {results.length > 0 ? (
           <ProductGrid products={results} />
-        ) : q ? (
+        ) : query ? (
           <p className="text-muted">Nenhuma peça corresponde a esta busca.</p>
         ) : null}
       </div>

@@ -20,6 +20,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    const cached = [
+      {
+        key: "Cache-Control",
+        value: "public, max-age=31536000, immutable",
+      },
+    ];
+    return [
+      { source: "/products/:file*", headers: cached },
+      { source: "/environments/:file*", headers: cached },
+      { source: "/brand/:file*", headers: cached },
+      { source: "/videos/:file*", headers: cached },
+    ];
+  },
 };
 
 export default nextConfig;

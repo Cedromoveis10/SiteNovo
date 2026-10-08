@@ -78,8 +78,8 @@ export function environmentPath(slug: EnvironmentSlug): string {
 }
 
 export function searchProducts(query: string): Product[] {
-  const term = query.trim().toLowerCase();
-  if (!term) return [];
+  const term = query.trim().slice(0, 80).toLowerCase();
+  if (term.length < 2) return [];
 
   return products.filter((product) => {
     const haystack = [

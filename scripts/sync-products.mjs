@@ -43,7 +43,7 @@ alter table public.products add column if not exists dimension_lines text[] defa
 
 alter table public.products enable row level security;
 
-revoke all on table public.products from anon, authenticated;
+revoke all on table public.products from anon, authenticated, public;
 `;
 
 const client = new pg.Client({

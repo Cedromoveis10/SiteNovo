@@ -25,6 +25,7 @@ export function QuoteForm({
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
   const [error, setError] = useState("");
   const [showroomError, setShowroomError] = useState(false);
@@ -77,11 +78,12 @@ export function QuoteForm({
     if (!validate() || !selectedShowroom) return;
 
     const lead: QuoteLead = {
-      name: name.trim(),
-      phone: phone.trim(),
+      name: name.trim().slice(0, 80),
+      phone: phone.trim().slice(0, 20),
       showroomId: selectedShowroom.id,
-      items: productNames,
-      message: message.trim(),
+      items: productNames.slice(0, 30),
+      message: message.trim().slice(0, 2000),
+      company: honeypot,
     };
 
     setStatus("sending");
@@ -136,7 +138,7 @@ export function QuoteForm({
   }
 
   return (
-    <form className="grid gap-4" onSubmit={onSubmit}>
+    <form className="relative grid gap-4" onSubmit={onSubmit}>
       <fieldset
         className={cn(
           "border px-3 py-3 md:px-4 md:py-4",
@@ -225,6 +227,20 @@ export function QuoteForm({
         </p>
       </fieldset>
 
+      <div aria-hidden="true" className="absolute -left-[10000px] h-0 w-0 overflow-hidden">
+        <label>
+          Empresa
+          <input
+            name="company"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(event) => setHoneypot(event.target.value)}
+          />
+        </label>
+      </div>
+
       <div className="grid grid-cols-2 items-end gap-4">
         <label className="block">
           <span className="eyebrow">Nome *</span>
@@ -233,6 +249,7 @@ export function QuoteForm({
             type="text"
             required
             autoComplete="name"
+            maxLength={80}
             value={name}
             onChange={(event) => setName(event.target.value)}
             className="field mt-1 !py-2"
@@ -249,6 +266,8 @@ export function QuoteForm({
             type="tel"
             required
             autoComplete="tel"
+            maxLength={20}
+            inputMode="tel"
             value={phone}
             onChange={(event) => setPhone(event.target.value)}
             className="field mt-1 !py-2"

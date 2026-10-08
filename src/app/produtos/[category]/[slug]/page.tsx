@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ProductBackLink } from "@/components/product/ProductBackLink";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import {
@@ -102,6 +103,11 @@ export default async function ProductPage({
       />
       <JsonLd data={productJsonLd(product)} />
 
+      <ProductBackLink
+        href={`/produtos/${product.category}`}
+        categoryName={categoryLabel(product.category)}
+        className="mb-6"
+      />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
@@ -157,6 +163,11 @@ export default async function ProductPage({
             <QuoteButton product={product} source="product_page" className="w-full" />
             <SpecialistButton source="product_page" className="w-full" />
             <AddToQuoteButton product={product} />
+            <ProductBackLink
+              href={`/produtos/${product.category}`}
+              categoryName={categoryLabel(product.category)}
+              className="mx-auto mt-1"
+            />
           </div>
         </div>
       </div>

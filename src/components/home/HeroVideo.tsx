@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { mediaUrl } from "@/lib/media";
 import { cn } from "@/lib/utils";
 
 const LOCAL_VIDEO = "/videos/hero-campeche.mp4";
+const LOCAL_POSTER = "/videos/hero-campeche.jpg";
 
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -59,8 +59,6 @@ export function HeroVideo() {
     };
   }, []);
 
-  const remote = mediaUrl("/videos/hero-campeche.mp4");
-
   return (
     <video
       ref={videoRef}
@@ -72,12 +70,11 @@ export function HeroVideo() {
       muted
       loop
       playsInline
-      preload="auto"
-      poster={mediaUrl("/videos/hero-campeche.jpg")}
+      preload="metadata"
+      poster={LOCAL_POSTER}
       aria-hidden="true"
     >
       <source src={`${LOCAL_VIDEO}#t=0.001`} type="video/mp4" />
-      {remote !== LOCAL_VIDEO ? <source src={remote} type="video/mp4" /> : null}
     </video>
   );
 }

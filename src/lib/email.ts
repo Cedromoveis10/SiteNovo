@@ -7,6 +7,7 @@ export type QuoteLead = {
   showroomId: string;
   items: string[];
   message?: string;
+  company?: string;
 };
 
 const GMAIL_USER = process.env.GMAIL_USER || "cedromoveistablets@gmail.com";
