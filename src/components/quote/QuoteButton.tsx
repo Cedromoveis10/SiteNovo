@@ -40,15 +40,17 @@ export function QuoteButton({
 export function SpecialistButton({
   className,
   source = "specialist",
+  product,
 }: {
   className?: string;
   source?: string;
+  product?: Product;
 }) {
   return (
     <StoreChoiceButton
       source={source}
       className={cn("btn btn-secondary", className)}
-      buildMessage={(showroom) => specialistMessage(showroom)}
+      buildMessage={(showroom) => specialistMessage(showroom, product?.name)}
     >
       Falar com um especialista
     </StoreChoiceButton>

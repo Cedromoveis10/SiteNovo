@@ -64,6 +64,18 @@ textarea {
   -webkit-tap-highlight-color: transparent;
 }
 
+.site-logo,
+.site-logo img {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.site-logo img {
+  pointer-events: none;
+}
+
 :focus-visible {
   outline: 1px solid var(--cedar);
   outline-offset: 3px;

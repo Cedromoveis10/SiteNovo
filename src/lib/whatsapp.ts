@@ -105,10 +105,11 @@ export function listQuoteMessage(
     .join("\n\n");
 }
 
-export function specialistMessage(showroom?: Showroom): string {
+export function specialistMessage(showroom?: Showroom, productName?: string): string {
+  const about = productName ? ` a respeito do ${productName}` : "";
   return showroom
-    ? `Olá! Vim pelo site e gostaria de falar com um especialista do ${showroom.name}.`
-    : "Olá! Vim pelo site e gostaria de falar com um especialista.";
+    ? `Olá! Vim pelo site e gostaria de falar com um especialista do ${showroom.name}${about}.`
+    : `Olá! Vim pelo site e gostaria de falar com um especialista${about}.`;
 }
 
 export function visitMessage(showroomName?: string): string {

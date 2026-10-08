@@ -82,16 +82,21 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-5 md:h-24 md:px-8">
-        <Link href="/" className="relative z-10 shrink-0" aria-label="Cedro Móveis & Ambientes">
+        <Link
+          href="/"
+          className="site-logo relative z-10 inline-flex shrink-0 cursor-pointer"
+          aria-label="Cedro Móveis & Ambientes"
+        >
           <Image
             src={mediaUrl("/brand/logo-transparent.png")}
-            alt="Cedro Móveis & Ambientes"
+            alt=""
             width={499}
             height={318}
             className="h-12 w-auto bg-transparent md:h-[3.6rem]"
             style={{ backgroundColor: "transparent" }}
             priority
             unoptimized
+            draggable={false}
           />
         </Link>
 

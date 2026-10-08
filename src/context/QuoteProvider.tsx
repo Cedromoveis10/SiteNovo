@@ -104,7 +104,7 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
       {toast ? (
         <div
           role="status"
-          className="fixed bottom-24 left-1/2 z-50 -translate-x-1/2 border border-line bg-ink px-5 py-3 text-center text-[0.72rem] tracking-[0.16em] text-paper uppercase md:bottom-8"
+          className="fixed bottom-24 left-1/2 z-50 -translate-x-1/2 border border-cedar bg-[color-mix(in_srgb,var(--cedar)_18%,white)] px-5 py-3 text-center text-[0.72rem] tracking-[0.16em] text-ink uppercase md:bottom-8"
         >
           {toast}
         </div>

@@ -161,7 +161,11 @@ export default async function ProductPage({
 
           <div className="sticky bottom-20 mt-10 flex flex-col gap-3 bg-white py-4 md:static md:bottom-auto">
             <QuoteButton product={product} source="product_page" className="w-full" />
-            <SpecialistButton source="product_page" className="w-full" />
+            <SpecialistButton
+              source="product_page"
+              className="w-full"
+              product={product}
+            />
             <AddToQuoteButton product={product} />
             <ProductBackLink
               href={`/produtos/${product.category}`}
