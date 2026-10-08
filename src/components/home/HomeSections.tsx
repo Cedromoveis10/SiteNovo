@@ -74,7 +74,7 @@ export function HomeSections() {
             copy="Se ainda não há uma peça em mente, explore pelo ambiente."
             light
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {environments.map((environment) => (
               <EnvironmentCard key={environment.slug} environment={environment} />
             ))}

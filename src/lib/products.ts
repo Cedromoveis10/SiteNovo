@@ -87,6 +87,7 @@ export function searchProducts(query: string): Product[] {
       product.category,
       product.subcategory,
       product.collection,
+      product.dimensions,
       ...(product.materials ?? []),
       ...(product.finishes ?? []),
       ...product.environment,

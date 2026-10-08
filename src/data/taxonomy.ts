@@ -23,6 +23,19 @@ export const categories: Category[] = [
     description:
       "Banquetas para ilha e gourmet, com o mesmo cuidado de proporção das cadeiras da coleção.",
   },
+  {
+    slug: "estofados",
+    name: "Estofados",
+    singular: "Estofado",
+    description:
+      "Estofados para a sala de estar, em configurações fixas e retráteis.",
+  },
+  {
+    slug: "poltronas",
+    name: "Poltronas",
+    singular: "Poltrona",
+    description: "Poltronas para a sala de estar.",
+  },
 ];
 
 export const environments: Environment[] = [
@@ -39,6 +52,13 @@ export const environments: Environment[] = [
     description:
       "Banquetas para ilha e espaços gourmet, com conforto e continuidade visual da coleção.",
     image: mediaUrl("/products/banqueta-lucia-02.png"),
+  },
+  {
+    slug: "sala-de-estar",
+    name: "Sala de estar",
+    description:
+      "Estofados e poltronas para o estar — peças para composição e conforto do ambiente.",
+    image: mediaUrl("/products/estofado-rivo.png"),
   },
 ];
 

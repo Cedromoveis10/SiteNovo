@@ -1,5 +1,11 @@
-export type CategorySlug = "mesas" | "cadeiras" | "banquetas";
-export type EnvironmentSlug = "sala-de-jantar" | "gourmet";
+export type CategorySlug =
+  | "mesas"
+  | "cadeiras"
+  | "banquetas"
+  | "estofados"
+  | "poltronas";
+export type EnvironmentSlug = "sala-de-jantar" | "gourmet" | "sala-de-estar";
+export type SupplierFlag = "Home" | "Klassic";
 
 export type ProductImage = {
   src: string;
@@ -15,10 +21,16 @@ export type Product = {
   collection?: string;
   environment: EnvironmentSlug[];
   description?: string;
+  dimensions?: string;
   materials?: string[];
   finishes?: string[];
   images: ProductImage[];
   featured?: boolean;
+};
+
+/** Catalog record with internal supplier flag. Never rendered in the public UI. */
+export type CatalogProduct = Product & {
+  supplier: SupplierFlag;
 };
 
 export type Category = {

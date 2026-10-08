@@ -8,7 +8,7 @@ import { createPortal } from "react-dom";
 import { siteConfig } from "@/config/site";
 import { categories, environments } from "@/data/taxonomy";
 import { useQuote } from "@/context/QuoteProvider";
-import { searchProducts } from "@/lib/products";
+import { categoryLabel, searchProducts } from "@/lib/products";
 import { track } from "@/lib/analytics";
 import { specialistMessage } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
@@ -197,7 +197,7 @@ export function Header() {
                       className="flex items-center justify-between py-3 text-sm"
                     >
                       <span>{product.name}</span>
-                      <span className="eyebrow">{product.category}</span>
+                      <span className="eyebrow">{categoryLabel(product.category)}</span>
                     </Link>
                   </li>
                 ))}

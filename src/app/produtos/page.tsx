@@ -11,7 +11,7 @@ import { breadcrumbJsonLd, itemListJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Coleção de móveis de alto padrão",
   description:
-    "Explore mesas, cadeiras e banquetas da curadoria Cedro. Design contemporâneo para ambientes de alto padrão.",
+    "Explore mesas, cadeiras, banquetas, estofados e poltronas da curadoria Cedro. Design contemporâneo para ambientes de alto padrão.",
   alternates: { canonical: "/produtos" },
 };
 
@@ -57,7 +57,7 @@ export default async function ProductsPage({
         <p className="eyebrow">Coleção</p>
         <h1 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">Produtos</h1>
         <p className="mt-5 text-muted">
-          Mesas, cadeiras e banquetas selecionadas para ambientes que pedem presença e permanência.
+          Mesas, cadeiras, banquetas, estofados e poltronas selecionadas para ambientes que pedem presença e permanência.
         </p>
         <p className="mt-4 text-sm text-muted">{productCountLabel(filtered.length)}</p>
       </div>

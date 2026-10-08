@@ -6,7 +6,7 @@ import { environments } from "@/data/taxonomy";
 export const metadata: Metadata = {
   title: "Ambientes",
   description:
-    "Explore a coleção Cedro a partir do ambiente: sala de jantar e gourmet.",
+    "Explore a coleção Cedro a partir do ambiente: sala de jantar, gourmet e sala de estar.",
   alternates: { canonical: "/ambientes" },
 };
 
@@ -25,10 +25,10 @@ export default function EnvironmentsPage() {
           Ambientes
         </h1>
         <p className="mt-5 text-muted">
-          Comece pelo espaço. A coleção atual reúne peças para a sala de jantar e para o gourmet.
+          Comece pelo espaço. A coleção atual reúne peças para a sala de jantar, o gourmet e a sala de estar.
         </p>
       </div>
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-6 md:grid-cols-3">
         {environments.map((environment) => (
           <EnvironmentCard key={environment.slug} environment={environment} />
         ))}

@@ -65,9 +65,14 @@ export default async function ProductPage({
   const categoryMeta = categories.find((item) => item.slug === product.category);
   const related = getRelatedProducts(product);
 
+  const variationLabel = isMechanism(product.subcategory)
+    ? "Mecanismo"
+    : "Variação";
+
   const specs = [
     product.collection ? ["Coleção", product.collection] : null,
-    product.subcategory ? ["Variação", product.subcategory] : null,
+    product.subcategory ? [variationLabel, product.subcategory] : null,
+    product.dimensions ? ["Dimensões", product.dimensions] : null,
     product.materials?.length
       ? ["Materiais", product.materials.join(", ")]
       : null,
@@ -119,9 +124,12 @@ export default async function ProductPage({
           {specs.length > 0 ? (
             <dl className="mt-10 divide-y divide-line border-y border-line">
               {specs.map(([label, value]) => (
-                <div key={label} className="flex items-baseline justify-between gap-6 py-4">
+                <div
+                  key={label}
+                  className="grid gap-2 py-4 sm:grid-cols-[8rem_1fr] sm:items-baseline sm:gap-6"
+                >
                   <dt className="eyebrow">{label}</dt>
-                  <dd className="text-right text-sm">{value}</dd>
+                  <dd className="text-sm leading-6 sm:text-right">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -138,4 +146,8 @@ export default async function ProductPage({
       <RelatedProducts products={related} />
     </div>
   );
+}
+
+function isMechanism(value?: string) {
+  return Boolean(value && /^(Retrátil|Fixo|Retrátil\/Fixo)$/.test(value));
 }
