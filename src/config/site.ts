@@ -32,7 +32,10 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5548999930026",
   email: process.env.NEXT_PUBLIC_EMAIL || "contato@cedromoveis.com.br",
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM || "cedromoveisestreito",
-  gaId: process.env.NEXT_PUBLIC_GA_ID || "",
+  gaId: (process.env.NEXT_PUBLIC_GA_ID || "G-N1VT96SE3G").replace(
+    /[^A-Z0-9-]/gi,
+    "",
+  ),
   gtmId: process.env.NEXT_PUBLIC_GTM_ID || "",
   metaPixelId:
     (process.env.NEXT_PUBLIC_META_PIXEL_ID || "1098776615876594").replace(

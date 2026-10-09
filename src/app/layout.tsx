@@ -59,6 +59,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white font-sans text-ink">
+        {siteConfig.gaId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaId}`}
+              strategy="beforeInteractive"
+            />
+            <Script id="ga4" strategy="beforeInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${siteConfig.gaId}', { send_page_view: false });`}
+            </Script>
+          </>
+        ) : null}
         {siteConfig.metaPixelId ? (
           <Script id="meta-pixel" strategy="beforeInteractive">
             {`!function(f,b,e,v,n,t,s)

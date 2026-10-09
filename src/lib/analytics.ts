@@ -20,6 +20,17 @@ declare global {
   }
 }
 
+const gaEvents: Partial<Record<AnalyticsEvent, string>> = {
+  view_product: "view_item",
+  view_category: "view_item_list",
+  select_product: "select_item",
+  add_to_quote: "add_to_cart",
+  begin_quote: "begin_checkout",
+  submit_quote: "generate_lead",
+  click_whatsapp: "generate_lead",
+  click_showroom: "generate_lead",
+};
+
 const metaEvents: Partial<Record<AnalyticsEvent, string>> = {
   view_product: "ViewContent",
   view_category: "ViewContent",
@@ -65,7 +76,31 @@ export function track(event: AnalyticsEvent, params: EventParams = {}): void {
   window.dataLayer.push({ event, ...params });
 
   if (typeof window.gtag === "function") {
-    window.gtag("event", event, params);
+    const gaEvent = gaEvents[event] ?? event;
+    const items =
+      params.item_id || params.item_name
+        ? [
+            {
+              item_id: params.item_id,
+              item_name: params.item_name,
+              item_category: params.item_category,
+            },
+          ]
+        : undefined;
+    window.gtag("event", gaEvent, {
+      items,
+      item_list_name: params.item_category,
+      method:
+        event === "click_whatsapp"
+          ? "whatsapp"
+          : event === "click_showroom"
+            ? "showroom"
+            : event === "submit_quote"
+              ? "form"
+              : params.source,
+      source: params.source,
+      showroom: params.showroom,
+    });
   }
 
   const metaEvent = metaEvents[event];
