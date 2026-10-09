@@ -60,12 +60,12 @@ export default async function ProductsPage({
         </p>
         <p className="mt-4 text-sm text-muted">{productCountLabel(filtered.length)}</p>
       </div>
-      <div className="mt-10">
+      <div className="mt-8 lg:mt-10">
         <Suspense>
           <Filters products={products} />
         </Suspense>
       </div>
-      <div className="mt-12">
+      <div className="mt-6 lg:mt-12">
         <ProductGrid products={filtered} />
       </div>
     </div>
