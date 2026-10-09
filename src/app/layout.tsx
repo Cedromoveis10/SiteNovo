@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@/components/analytics/Analytics";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -58,6 +59,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white font-sans text-ink">
+        {siteConfig.metaPixelId ? (
+          <Script id="meta-pixel" strategy="beforeInteractive">
+            {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${siteConfig.metaPixelId}');
+fbq('track', 'PageView');`}
+          </Script>
+        ) : null}
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
         <Providers>
@@ -68,6 +83,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <WhatsAppButton />
         </Providers>
         <Analytics />
+        {siteConfig.metaPixelId ? (
+          <noscript>
+            <img
+              height={1}
+              width={1}
+              className="hidden"
+              alt=""
+              src={`https://www.facebook.com/tr?id=${siteConfig.metaPixelId}&ev=PageView&noscript=1`}
+            />
+          </noscript>
+        ) : null}
       </body>
     </html>
   );

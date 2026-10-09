@@ -1,10 +1,25 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { siteConfig } from "@/config/site";
 
 export function Analytics() {
-  const { gaId, gtmId } = siteConfig;
+  const { gaId, gtmId, metaPixelId } = siteConfig;
+  const pathname = usePathname();
+  const isFirstPath = useRef(true);
+
+  useEffect(() => {
+    if (!metaPixelId) return;
+    if (isFirstPath.current) {
+      isFirstPath.current = false;
+      return;
+    }
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "PageView");
+    }
+  }, [pathname, metaPixelId]);
 
   return (
     <>

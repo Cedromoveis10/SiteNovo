@@ -24,9 +24,9 @@ export default function PrivacyPage() {
           usadas apenas no contexto da solicitação de orçamento ou do contato iniciado pelo visitante.
         </p>
         <p>
-          O site pode empregar ferramentas de medição de audiência, quando configuradas, para
-          compreender o uso das páginas. Identificadores de analytics permanecem desativados até que
-          sejam inseridos nas variáveis de ambiente do projeto.
+          O site pode empregar ferramentas de medição de audiência e de anúncios, incluindo o Meta
+          Pixel, para compreender o uso das páginas e medir campanhas. Esses dados servem para
+          atendimento e divulgação da Cedro, não para venda a terceiros.
         </p>
         <p>
           Para dúvidas sobre dados pessoais, utilize os canais de contato publicados na página de
