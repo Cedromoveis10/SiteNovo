@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sendQuoteEmail } from "@/lib/email";
+import { sendQuoteEmail, type QuoteLead } from "@/lib/email";
 import { insertQuoteLead } from "@/lib/leads";
 import { products } from "@/lib/products";
 import { clientKey, rateLimit } from "@/lib/rate-limit";
@@ -49,7 +49,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const channel = data.channel === "whatsapp" ? "whatsapp" : "form";
+  const channel: NonNullable<QuoteLead["channel"]> =
+    data.channel === "whatsapp" ? "whatsapp" : "form";
   const name = sanitizeLine(data.name, NAME_MAX);
   const phone = String(data.phone ?? "").trim().slice(0, 20);
   const phoneDigits = phone.replace(/\D/g, "");
@@ -88,7 +89,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const lead = {
+  const lead: QuoteLead = {
     name,
     phone,
     showroomId,
