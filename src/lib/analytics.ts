@@ -69,6 +69,41 @@ function metaParams(event: AnalyticsEvent, params: EventParams) {
   };
 }
 
+function gaParams(event: AnalyticsEvent, params: EventParams) {
+  const payload: Record<string, unknown> = {};
+  const method =
+    event === "click_whatsapp"
+      ? "whatsapp"
+      : event === "click_showroom"
+        ? "showroom"
+        : event === "submit_quote"
+          ? "form"
+          : params.source;
+  const leadSource = params.source ?? params.action;
+
+  if (method) payload.method = method;
+  if (leadSource) payload.lead_source = leadSource;
+  if (params.showroom) payload.showroom = params.showroom;
+  if (params.item_category) payload.item_list_name = params.item_category;
+
+  if (
+    event !== "submit_quote" &&
+    event !== "click_whatsapp" &&
+    event !== "click_showroom" &&
+    (params.item_id || params.item_name)
+  ) {
+    payload.items = [
+      {
+        item_id: params.item_id,
+        item_name: params.item_name,
+        item_category: params.item_category,
+      },
+    ];
+  }
+
+  return payload;
+}
+
 export function track(event: AnalyticsEvent, params: EventParams = {}): void {
   if (typeof window === "undefined") return;
 
@@ -77,30 +112,7 @@ export function track(event: AnalyticsEvent, params: EventParams = {}): void {
 
   if (typeof window.gtag === "function") {
     const gaEvent = gaEvents[event] ?? event;
-    const items =
-      params.item_id || params.item_name
-        ? [
-            {
-              item_id: params.item_id,
-              item_name: params.item_name,
-              item_category: params.item_category,
-            },
-          ]
-        : undefined;
-    window.gtag("event", gaEvent, {
-      items,
-      item_list_name: params.item_category,
-      method:
-        event === "click_whatsapp"
-          ? "whatsapp"
-          : event === "click_showroom"
-            ? "showroom"
-            : event === "submit_quote"
-              ? "form"
-              : params.source,
-      source: params.source,
-      showroom: params.showroom,
-    });
+    window.gtag("event", gaEvent, gaParams(event, params));
   }
 
   const metaEvent = metaEvents[event];
