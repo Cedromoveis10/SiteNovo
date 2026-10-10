@@ -118,11 +118,14 @@ export function HomeSections() {
           <h2 className="mt-5 font-display text-4xl leading-tight tracking-tight md:text-6xl">
             Encontrou a peça ideal para o seu ambiente?
           </h2>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/orcamento" className="btn btn-light">
+          <div className="mt-10 flex flex-col items-center gap-6">
+            <Link href="/orcamento" className="btn btn-gold">
               Solicitar orçamento
             </Link>
-            <SpecialistButton className="btn-light" source="home_final" />
+            <SpecialistButton
+              className="!min-h-0 border-0 bg-transparent px-0 text-[0.72rem] tracking-[0.14em] text-cedar uppercase hover:text-paper"
+              source="home_final"
+            />
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import Script from "next/script";
 import { Analytics } from "@/components/analytics/Analytics";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { MobileCtaBar, WhatsAppButton } from "@/components/layout/MobileCtaBar";
+import { FloatingCtas } from "@/components/layout/MobileCtaBar";
 import { Providers } from "@/components/Providers";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
@@ -90,10 +90,9 @@ fbq('track', 'PageView');`}
         <JsonLd data={localBusinessJsonLd()} />
         <Providers>
           <Header />
-          <main className="flex-1 pb-20 md:pb-0">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
-          <MobileCtaBar />
-          <WhatsAppButton />
+          <FloatingCtas />
         </Providers>
         <Analytics />
         {siteConfig.metaPixelId ? (

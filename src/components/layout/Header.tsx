@@ -216,7 +216,7 @@ export function Header() {
       {mounted && open
         ? createPortal(
             <div
-              className="fixed inset-x-0 bottom-0 top-[4.5rem] z-50 overflow-y-auto overscroll-contain bg-white px-5 pt-5 pb-28 md:top-24 md:px-8 lg:hidden"
+              className="fixed inset-x-0 bottom-0 top-[4.5rem] z-50 overflow-y-auto overscroll-contain bg-white px-5 pt-5 pb-10 md:top-24 md:px-8 lg:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Menu"
