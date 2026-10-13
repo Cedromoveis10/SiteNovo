@@ -5,7 +5,7 @@ export type CategorySlug =
   | "estofados"
   | "poltronas";
 export type EnvironmentSlug = "sala-de-jantar" | "gourmet" | "sala-de-estar";
-export type SupplierFlag = "Home" | "Klassic";
+export type SupplierFlag = "Home" | "Klassic" | "Minuano" | "Salva";
 
 export type ProductImage = {
   src: string;

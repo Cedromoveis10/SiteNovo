@@ -1545,5 +1545,509 @@
         "alt": "Estofado Star, vista 3"
       }
     ]
+  },
+  {
+    "id": "estofado-collet",
+    "name": "Estofado Collet",
+    "slug": "estofado-collet",
+    "category": "estofados",
+    "subcategory": "Reclinável",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento reclinável.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,20m; 1,10m; 95cm",
+      "Módulo sem braço: 86cm; 71cm",
+      "Sofá 2 lugares: 2,40m",
+      "Sofá 3 lugares: 3,06m; 2,61m",
+      "Console: 30cm",
+      "Profundidade fechada: 1,00m; 85cm; 70cm",
+      "Profundidade aberta: 1,61m",
+      "Altura: 95cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-collet.png",
+        "alt": "Estofado Collet"
+      },
+      {
+        "src": "/products/estofado-collet-2.png",
+        "alt": "Estofado Collet, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-connor",
+    "name": "Estofado Connor",
+    "slug": "estofado-connor",
+    "category": "estofados",
+    "subcategory": "Retrátil",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento retrátil.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,22m; 1,42m",
+      "Módulo canto: 2,17m",
+      "Sofá 2 braços: 2,44m; 2,14m",
+      "Sofá 2 módulos: 2,44m; 2,84m",
+      "Canto: 3,39m",
+      "Profundidade fechada: 1,15m; 95cm; 80cm",
+      "Profundidade aberta: 1,62m",
+      "Altura: 92cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-connor.png",
+        "alt": "Estofado Connor"
+      },
+      {
+        "src": "/products/estofado-connor-2.png",
+        "alt": "Estofado Connor, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-oslo",
+    "name": "Estofado Oslo",
+    "slug": "estofado-oslo",
+    "category": "estofados",
+    "subcategory": "Reclinável",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento reclinável.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,05m; 90cm; 1,25m",
+      "Módulo sem braço: 85cm; 70cm",
+      "Sofá 3 lugares: 2,95m",
+      "Console: 30cm",
+      "Profundidade fechada: 96cm",
+      "Profundidade aberta: 1,61m",
+      "Altura: 97cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-oslo.png",
+        "alt": "Estofado Oslo"
+      },
+      {
+        "src": "/products/estofado-oslo-2.png",
+        "alt": "Estofado Oslo, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-puerto-fixo",
+    "name": "Estofado Puerto Fixo",
+    "slug": "estofado-puerto-fixo",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Sofá 2 lugares: 2,10m",
+      "Sofá 3 lugares: 2,40m",
+      "Módulo com 1 braço: 1,35m",
+      "Sofá 2 módulos: 2,70m",
+      "Poltrona: 1,12m",
+      "Profundidade: 98cm",
+      "Altura: 89cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-puerto-fixo.png",
+        "alt": "Estofado Puerto Fixo"
+      }
+    ]
+  },
+  {
+    "id": "estofado-puerto-power",
+    "name": "Estofado Puerto Power",
+    "slug": "estofado-puerto-power",
+    "category": "estofados",
+    "subcategory": "Reclinável",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento reclinável.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,06m; 91cm",
+      "Módulo sem braço: 90cm; 75cm",
+      "Sofá 3 lugares: 3,02m; 2,57m",
+      "Poltrona: 1,24m",
+      "Console: 30cm",
+      "Profundidade fechada: 98cm",
+      "Profundidade aberta: 1,51m",
+      "Altura: 89cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-puerto-power.png",
+        "alt": "Estofado Puerto Power"
+      },
+      {
+        "src": "/products/estofado-puerto-power-2.png",
+        "alt": "Estofado Puerto Power, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-santiago",
+    "name": "Estofado Santiago",
+    "slug": "estofado-santiago",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Sofá: 2,36m; 2,13m; 1,90m; 1,47m",
+      "Módulo com 1 braço: 1,27m; 1,84m",
+      "Sofá 2 módulos: 2,54m",
+      "Chaise: 95cm; composição 2,79m",
+      "Módulo: 80x68cm",
+      "Profundidade: 90cm; chaise 1,42m",
+      "Altura: 90cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-santiago.png",
+        "alt": "Estofado Santiago"
+      }
+    ]
+  },
+  {
+    "id": "estofado-santorini",
+    "name": "Estofado Santorini",
+    "slug": "estofado-santorini",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,35m; 2,14m",
+      "Sofá 2 braços: 2,44m; 2,10m",
+      "Sofá 2 módulos: 2,70m",
+      "Chaise: 1,22m; composição 3,36m",
+      "Poltrona: 1,11m",
+      "Profundidade: 95cm; chaise 1,47m",
+      "Altura: 80cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-santorini.png",
+        "alt": "Estofado Santorini"
+      },
+      {
+        "src": "/products/estofado-santorini-2.png",
+        "alt": "Estofado Santorini, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-sebastian",
+    "name": "Estofado Sebastian",
+    "slug": "estofado-sebastian",
+    "category": "estofados",
+    "subcategory": "Retrátil",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento retrátil.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,22m; 1,40m; 1,05m",
+      "Módulo canto: 2,34m",
+      "Sofá: 2,44m; 2,10m; 1,90m",
+      "Profundidade fechada: 1,12m; 95cm; 85cm",
+      "Profundidade aberta: 1,49m; 1,30m; 1,08m",
+      "Altura: 89cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-sebastian.png",
+        "alt": "Estofado Sebastian"
+      },
+      {
+        "src": "/products/estofado-sebastian-2.png",
+        "alt": "Estofado Sebastian, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-teruel",
+    "name": "Estofado Teruel",
+    "slug": "estofado-teruel",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Sofá: 2,30m; 2,06m; 1,50m",
+      "Módulo com 1 braço: 1,35m; 1,05m",
+      "Sofá 2 módulos: 2,70m",
+      "Profundidade: 91cm",
+      "Altura: 81cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-teruel.png",
+        "alt": "Estofado Teruel"
+      },
+      {
+        "src": "/products/estofado-teruel-2.png",
+        "alt": "Estofado Teruel, vista 2"
+      }
+    ]
+  },
+  {
+    "id": "estofado-croa",
+    "name": "Estofado Croá",
+    "slug": "estofado-croa",
+    "category": "estofados",
+    "subcategory": "Reclinável",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento reclinável.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,15m; 1,00m; 1,30m",
+      "Módulo sem braço: 90cm; 75cm; 1,05m",
+      "Canto: 1,28m",
+      "Console reto: 32cm",
+      "Console ângulo: 42cm",
+      "Profundidade fechada: 1,07m",
+      "Profundidade aberta: 1,62m",
+      "Altura: 90cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-croa.png",
+        "alt": "Estofado Croá"
+      },
+      {
+        "src": "/products/estofado-croa-2.png",
+        "alt": "Estofado Croá, vista 2"
+      },
+      {
+        "src": "/products/estofado-croa-3.png",
+        "alt": "Estofado Croá, vista 3"
+      },
+      {
+        "src": "/products/estofado-croa-4.png",
+        "alt": "Estofado Croá, vista 4"
+      }
+    ]
+  },
+  {
+    "id": "estofado-duna",
+    "name": "Estofado Duna",
+    "slug": "estofado-duna",
+    "category": "estofados",
+    "subcategory": "Reclinável",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro, com assento reclinável.",
+    "dimensionLines": [
+      "Módulo com 1 braço: 1,20m",
+      "Módulo sem braço: 85cm",
+      "Sofá 3 lugares: 3,25m",
+      "Profundidade fechada: 1,20m",
+      "Profundidade aberta: 1,72m",
+      "Altura: 88cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-duna.png",
+        "alt": "Estofado Duna"
+      },
+      {
+        "src": "/products/estofado-duna-2.png",
+        "alt": "Estofado Duna, vista 2"
+      },
+      {
+        "src": "/products/estofado-duna-3.png",
+        "alt": "Estofado Duna, vista 3"
+      },
+      {
+        "src": "/products/estofado-duna-4.png",
+        "alt": "Estofado Duna, vista 4"
+      },
+      {
+        "src": "/products/estofado-duna-5.png",
+        "alt": "Estofado Duna, vista 5"
+      }
+    ]
+  },
+  {
+    "id": "estofado-pier",
+    "name": "Estofado Pier",
+    "slug": "estofado-pier",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Sofá: 2,14m",
+      "Módulo: 91cm",
+      "Módulo com mesa: 1,23m; 1,27m",
+      "Profundidade: 91cm; 95cm",
+      "Altura: 78cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-pier.png",
+        "alt": "Estofado Pier"
+      },
+      {
+        "src": "/products/estofado-pier-2.png",
+        "alt": "Estofado Pier, vista 2"
+      },
+      {
+        "src": "/products/estofado-pier-3.png",
+        "alt": "Estofado Pier, vista 3"
+      },
+      {
+        "src": "/products/estofado-pier-4.png",
+        "alt": "Estofado Pier, vista 4"
+      }
+    ]
+  },
+  {
+    "id": "estofado-poente",
+    "name": "Estofado Poente",
+    "slug": "estofado-poente",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Sofá: 3,00m",
+      "Profundidade: 94cm",
+      "Altura: 85cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-poente.png",
+        "alt": "Estofado Poente"
+      },
+      {
+        "src": "/products/estofado-poente-2.png",
+        "alt": "Estofado Poente, vista 2"
+      },
+      {
+        "src": "/products/estofado-poente-3.png",
+        "alt": "Estofado Poente, vista 3"
+      },
+      {
+        "src": "/products/estofado-poente-4.png",
+        "alt": "Estofado Poente, vista 4"
+      }
+    ]
+  },
+  {
+    "id": "estofado-romeu",
+    "name": "Estofado Romeu",
+    "slug": "estofado-romeu",
+    "category": "estofados",
+    "subcategory": "Fixo",
+    "environment": [
+      "sala-de-estar"
+    ],
+    "description": "Estofado em couro.",
+    "dimensionLines": [
+      "Módulo: 83cm; 92cm; 94cm; 1,04m; 1,05m; 1,15m",
+      "Sofá: 2,10m; 2,19m; 2,30m; 2,60m; 2,71m",
+      "Chaise: 1,15x1,66m",
+      "Profundidade: 92cm",
+      "Altura: 79cm"
+    ],
+    "materials": [
+      "Couro"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "/products/estofado-romeu.png",
+        "alt": "Estofado Romeu"
+      },
+      {
+        "src": "/products/estofado-romeu-2.png",
+        "alt": "Estofado Romeu, vista 2"
+      },
+      {
+        "src": "/products/estofado-romeu-3.png",
+        "alt": "Estofado Romeu, vista 3"
+      },
+      {
+        "src": "/products/estofado-romeu-4.png",
+        "alt": "Estofado Romeu, vista 4"
+      }
+    ]
   }
 ]

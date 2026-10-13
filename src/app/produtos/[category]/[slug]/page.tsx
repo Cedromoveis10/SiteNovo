@@ -182,5 +182,7 @@ export default async function ProductPage({
 }
 
 function isMechanism(value?: string) {
-  return Boolean(value && /^(Retrátil|Fixo|Retrátil\/Fixo)$/.test(value));
+  return Boolean(
+    value && /^(Retrátil|Fixo|Retrátil\/Fixo|Reclinável)$/.test(value),
+  );
 }

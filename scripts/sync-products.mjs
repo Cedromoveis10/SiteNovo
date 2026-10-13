@@ -31,7 +31,7 @@ create table if not exists public.products (
   finishes text[] not null default '{}'::text[],
   images jsonb not null default '[]'::jsonb,
   featured boolean not null default false,
-  supplier text not null check (supplier in ('Home', 'Klassic')),
+  supplier text not null check (supplier in ('Home', 'Klassic', 'Minuano', 'Salva')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
@@ -40,6 +40,29 @@ alter table public.products add column if not exists width text;
 alter table public.products add column if not exists height text;
 alter table public.products add column if not exists depth text;
 alter table public.products add column if not exists dimension_lines text[] default '{}'::text[];
+
+do $$
+declare
+  constraint_name text;
+begin
+  select con.conname
+    into constraint_name
+  from pg_constraint con
+  join pg_class rel on rel.oid = con.conrelid
+  join pg_namespace nsp on nsp.oid = rel.relnamespace
+  where nsp.nspname = 'public'
+    and rel.relname = 'products'
+    and con.contype = 'c'
+    and pg_get_constraintdef(con.oid) ilike '%supplier%';
+
+  if constraint_name is not null then
+    execute format('alter table public.products drop constraint %I', constraint_name);
+  end if;
+
+  alter table public.products
+    add constraint products_supplier_check
+    check (supplier in ('Home', 'Klassic', 'Minuano', 'Salva'));
+end $$;
 
 alter table public.products enable row level security;
 
